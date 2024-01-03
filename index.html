@@ -32,7 +32,16 @@
             </template>
         </div>
         <script>
-            window.theGame = new Runner("body");
+            window.checkForReady = setInterval(
+                function() {
+                    if(!theGame && Runner) {
+                        window.theGame = new Runner("body");
+                    }
+                    if(theGame) {
+                        clearInterval(checkForReady);
+                    }
+                }, 1000
+            );
         </script>
     </head>
     <body>
