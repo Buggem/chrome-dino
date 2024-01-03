@@ -34,7 +34,7 @@
         <script>
             window.checkForReady = setInterval(
                 function() {
-                    if(!theGame && Runner) {
+                    if(Runner) {
                         window.theGame = new Runner("body");
                     }
                     if(theGame) {
