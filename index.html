@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DINO-OFFLINE</title>
+        <script src="./offline.js"></script>
+        <style id="cssimportant"></style>
+        <script id="so-answer38796843">
+            /*
+             * Code from https://stackoverflow.com/a/38796843/
+             */
+            window.playSound = function(url, loop) {
+              var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
+              ourAudio.style.display = "none"; // Hide the audio element
+              ourAudio.src = url; // Set resource to our URL
+              ourAudio.autoplay = true; // Automatically play sound
+              ourAudio.loop = loop;
+              ourAudio.onended = function() {
+                if(!loop) { this.remove(); } // Remove when played.
+              };
+              document.body.appendChild(ourAudio);
+            };
+          </script>
+        <link href="./main.css" rel="stylesheet"/>
+        <div id="offline-resources" style="opacity:0;">
+            <img id="offline-resources-1x" src="./assets/1x/sprites.png">
+            <img id="offline-resources-2x" src="./assets/2x/sprites.png">
+            <template id="audio-resources">
+                <audio id="offline-sound-press" src="./assets/sfx/button-press.mp3"></audio>
+                <audio id="offline-sound-hit" src="./assets/sfx/hit.mp3"></audio>
+                <audio id="offline-sound-reached" src="./assets/sfx/score-reached.mp3"></audio>
+            </template>
+        </div>
+    </head>
+</html>
