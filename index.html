@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>DINO-OFFLINE</title>
-        <script src="./offline.js"></script>
+        <script async src="./offline.js"></script>
         <style id="cssimportant"></style>
         <script id="so-answer38796843">
             /*
@@ -20,6 +20,7 @@
               document.body.appendChild(ourAudio);
             };
           </script>
+        <link href="/main.css" rel="stylesheet"/>
         <link href="./main.css" rel="stylesheet"/>
         <div id="offline-resources" style="opacity:0;">
             <img id="offline-resources-1x" src="./assets/1x/sprites.png">
@@ -30,5 +31,11 @@
                 <audio id="offline-sound-reached" src="./assets/sfx/score-reached.mp3"></audio>
             </template>
         </div>
+        <script>
+            window.theGame = new Runner("body");
+        </script>
     </head>
+    <body>
+        <!-- dino game container-->
+    </body>
 </html>
